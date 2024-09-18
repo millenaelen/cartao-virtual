@@ -1,0 +1,134 @@
+/* CSS (Folha de estilo em cascata)
+
+SELETOR{
+    PROPRIEDADE: VALOR;
+    }*/
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #222831;
+}
+
+h1,h2,h3,h4
+{
+    margin: 0; /*remover a margem automatica dos titulos*/
+}
+
+h1
+{
+    color:#393E46;
+    font-size: 32px;
+}
+
+h2
+{
+    color: #222831;
+    font-size: 20px;
+}
+
+p
+{
+    color:#666666;
+    /*font-size ja é o padrao do html que é 16px*/
+}
+
+.card
+{
+    background-color:#EEEEEE;
+    width: 340px;
+    height: auto; /*deixar o height(altura) automatico é mlehor p ele ir se ajustando conforme ajusta a pag, p definir um tamanho só se quiser manter um padrao*/
+    text-align: center;
+    
+    /*HACK para centralizar um div*/
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 80px;
+
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.card img
+{
+    /*border-color: #222831;
+    border-width: 5px;
+    border-style:solid;*/
+    border: 5px #222831 solid;
+    border-radius: 55px; /*é 55px pois é 100 da imagem + 10 da margem da imagem*/
+    margin-bottom: 30px;
+}
+
+/*formatando todos os <a> q estao dentro da div links*/
+.links a
+{
+    display: block;
+    background-color: #393E46;
+    color: #ffffff;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    border-radius: 3px;
+    
+}
+
+/*qnd passa o mouse nos links e efetuar uma acao*/
+.links a:hover
+{
+    background-color: #000000;
+}
+
+.links a:active
+{ /*enquanto o mouse esta selecionando/clicando*/
+    font-style: italic;
+} 
+
+.links a:visited
+{
+    color: #EEEEEE;
+}
+
+.assinatura
+{
+    color:#222831;
+    display: inline-block; /*como o link é um elemento em linha, precisa transformar em bloco, porem usa o inline block para o link nao funcionar na linha toda*/
+    margin-top: 30px; 
+}
+
+/*Media queries
+condicionais p mudanca de design*/
+
+@media (max-width: 600px)
+{
+    h1 
+    {
+        font-size: 24px;
+    }
+
+    h2
+    {
+        font-size: 18px;
+    }
+
+    .card
+    {
+        padding: 15px;
+        width: 310px;
+    }
+
+    .card img
+    {
+        width: 70px;
+        margin-bottom: 15px;
+    }
+
+    .assinatura
+    {
+        margin-top: 15px;
+    }
+
+    
+}
